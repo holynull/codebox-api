@@ -56,7 +56,7 @@ class LocalBox(BaseBox):
 
     def __init__(self, /, **kwargs) -> None:
         super().__init__(session_id=kwargs.pop("session_id", None))
-        self.port: int = 8888
+        self.port: int = 9000
         self.kernel_id: Optional[dict] = None
         self.ws: Union[WebSocketClientProtocol, ClientConnection, None] = None
         self.jupyter: Union[Process, subprocess.Popen, None] = None
